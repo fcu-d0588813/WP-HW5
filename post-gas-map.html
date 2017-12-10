@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 600px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+
+<script>
+  function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: {lat: 24.169545, lng: 120.654334}
+        });
+
+
+var icon1 = {
+    url: "https://cdn3.iconfinder.com/data/icons/oil-gas/100/08-512.png", // url
+    scaledSize: new google.maps.Size(40, 40), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+
+var icon2 = {
+    url: "http://www.pvhc.net/img63/ryfkuinilyiyjmvfijbf.png", // url
+    scaledSize: new google.maps.Size(40, 40), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+};
+
+//加油站1
+var marker1 = new google.maps.Marker({
+position: new google.maps.LatLng(24.172260, 120.645471),
+map: map,
+icon:icon1
+});
+
+var infowindow1 = new google.maps.InfoWindow({
+    content: '<h3>台灣中油河南路站</h3><br /><p>台中市西屯區河南路二段341號</p>'
+    });
+
+google.maps.event.addListener(marker1,'mousemove', function() {
+infowindow1.open(map, marker1);
+});
+
+//加油站2
+
+var marker2 = new google.maps.Marker({
+position: new google.maps.LatLng(24.171647, 120.643910),
+map: map,
+icon:icon1
+});
+
+var infowindow2 = new google.maps.InfoWindow({
+    content: '<h3>台灣中油青海站</h3><br /><p>台中市西屯區青海路二段211號</p>'
+    });
+
+google.maps.event.addListener(marker2,'mousemove', function() {
+infowindow2.open(map, marker2);
+});
+
+//加油站3
+
+var marker3 = new google.maps.Marker({
+position: new google.maps.LatLng(24.176514, 120.640800),
+map: map,
+icon:icon1
+});
+
+var infowindow3 = new google.maps.InfoWindow({
+    content: '<h3>GOGORO 電池交換站 7-ELEVEN逢喜門市站</h3><br /><p>台中市西屯區逢甲路247號</p>'
+    });
+
+google.maps.event.addListener(marker3,'mousemove', function() {
+infowindow3.open(map, marker3);
+});
+
+
+//加油站4
+
+var marker4 = new google.maps.Marker({
+position: new google.maps.LatLng(24.163582, 120.649877),
+map: map,
+icon:icon1
+});
+
+var infowindow4 = new google.maps.InfoWindow({
+    content: '<h3>台灣中油文心站</h3><br /><p>台中市西屯區文心路三段2號</p>'
+    });
+
+google.maps.event.addListener(marker4,'mousemove', function() {
+infowindow4.open(map, marker4);
+});
+
+//加油站5
+
+var marker5 = new google.maps.Marker({
+position: new google.maps.LatLng(24.172314, 120.659833),
+map: map,
+icon:icon1
+});
+
+var infowindow5 = new google.maps.InfoWindow({
+    content: '<h3>台灣中油</h3><br /><p>台中市西屯區文心路三段187號</p>'
+    });
+
+google.maps.event.addListener(marker5,'mousemove', function() {
+infowindow5.open(map, marker5);
+});
+
+
+//郵局1
+
+var marker6 = new google.maps.Marker({
+position: new google.maps.LatLng(24.175405, 120.649103),
+map: map,
+icon:icon2
+});
+
+var infowindow6 = new google.maps.InfoWindow({
+    content: '<h3>臺中逢甲郵局</h3><br /><p>台中市西屯區河南路2段268號</p>'
+    });
+
+google.maps.event.addListener(marker6,'mousemove', function() {
+infowindow6.open(map, marker6);
+});
+
+//郵局2
+
+var marker7 = new google.maps.Marker({
+position: new google.maps.LatLng(24.176746, 120.637653),
+map: map,
+icon:icon2
+});
+
+var infowindow7 = new google.maps.InfoWindow({
+    content: '<h3>台中西屯郵局</h3><br /><p>台中市西屯區黎明路三段130號</p>'
+    });
+
+google.maps.event.addListener(marker7,'mousemove', function() {
+infowindow7.open(map, marker7);
+});
+
+
+//郵局3
+
+var marker8 = new google.maps.Marker({
+position: new google.maps.LatLng(24.164688, 120.654192),
+map: map,
+icon:icon2
+});
+
+var infowindow8 = new google.maps.InfoWindow({
+    content: '<h3>台中何厝郵局</h3><br /><p>台中市西屯區青海路一段83號</p>'
+    });
+
+google.maps.event.addListener(marker8,'mousemove', function() {
+infowindow8.open(map, marker8);
+});
+
+
+}
+
+
+</script>
+
+    <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnnN5EXkOkvTnLvplb3wj6kTL3nd62zs&callback=initMap">
+    </script>
+  </body>
+</html>
+
+ 
